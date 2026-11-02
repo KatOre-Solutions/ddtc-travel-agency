@@ -1,0 +1,24 @@
+{
+  "source": "brand-source\\DDTC-primary-client-original.png",
+  "method": "Direct contour trace, source alpha >= 128, six-ink color classification, spline paths",
+  "variants": [
+    "ddtc-primary.svg",
+    "ddtc-white-gold.svg",
+    "ddtc-navy.svg",
+    "ddtc-wordmark.svg",
+    "ddtc-wordmark-navy.svg",
+    "ddtc-horizontal.svg",
+    "ddtc-favicon.svg"
+  ],
+  "originalDimensions": [
+    1536,
+    1024
+  ],
+  "sourceViewBox": [
+    67,
+    37,
+    1408,
+    957
+  ],
+  "limit": "Raster-derived web vectors, not original professional vector masters; fine cursive and minor contours require artwork approval."
+}

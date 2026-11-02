@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-02T15:16:03Z",
+  "title": "Design System: DDTC Travel Agency",
+  "extensions": {
+    "colorMeta": {
+      "background": { "role": "neutral", "displayName": "Midnight canvas", "tonalRamp": ["oklch(15% .02 260)", "oklch(27% .03 260)", "oklch(39% .04 260)", "oklch(51% .045 260)", "oklch(63% .04 260)", "oklch(75% .03 260)", "oklch(87% .02 260)", "oklch(95% .008 260)"] },
+      "navy": { "role": "primary", "displayName": "Brand navy", "tonalRamp": ["oklch(15% .025 255)", "oklch(27% .055 255)", "oklch(39% .08 255)", "oklch(51% .1 255)", "oklch(63% .1 255)", "oklch(75% .075 255)", "oklch(87% .04 255)", "oklch(95% .012 255)"] },
+      "ocean": { "role": "secondary", "displayName": "Ocean blue", "tonalRamp": ["oklch(15% .02 235)", "oklch(27% .05 235)", "oklch(39% .08 235)", "oklch(51% .11 235)", "oklch(63% .11 235)", "oklch(75% .08 235)", "oklch(87% .04 235)", "oklch(95% .012 235)"] },
+      "action": { "role": "primary", "displayName": "Action blue", "tonalRamp": ["oklch(15% .03 260)", "oklch(27% .08 260)", "oklch(39% .16 260)", "oklch(51% .23 260)", "oklch(63% .19 260)", "oklch(75% .12 260)", "oklch(87% .06 260)", "oklch(95% .02 260)"] },
+      "action-hover": { "role": "primary", "displayName": "Action blue hover", "tonalRamp": ["oklch(15% .03 260)", "oklch(27% .08 260)", "oklch(39% .14 260)", "oklch(51% .2 260)", "oklch(63% .19 260)", "oklch(75% .12 260)", "oklch(87% .06 260)", "oklch(95% .02 260)"] },
+      "gold": { "role": "secondary", "displayName": "Champagne gold", "tonalRamp": ["oklch(15% .015 80)", "oklch(27% .035 80)", "oklch(39% .06 80)", "oklch(51% .085 80)", "oklch(63% .105 80)", "oklch(75% .105 80)", "oklch(87% .06 80)", "oklch(95% .02 80)"] },
+      "ivory": { "role": "neutral", "displayName": "Warm ivory", "tonalRamp": ["oklch(15% .003 85)", "oklch(27% .005 85)", "oklch(39% .008 85)", "oklch(51% .012 85)", "oklch(63% .014 85)", "oklch(75% .014 85)", "oklch(87% .012 85)", "oklch(95% .008 85)"] },
+      "white": { "role": "neutral", "displayName": "White", "tonalRamp": ["oklch(15% 0 0)", "oklch(27% 0 0)", "oklch(39% 0 0)", "oklch(51% 0 0)", "oklch(63% 0 0)", "oklch(75% 0 0)", "oklch(87% 0 0)", "oklch(95% 0 0)"] },
+      "muted": { "role": "neutral", "displayName": "Muted blue-grey", "tonalRamp": ["oklch(15% .01 260)", "oklch(27% .02 260)", "oklch(39% .03 260)", "oklch(51% .035 260)", "oklch(63% .035 260)", "oklch(75% .03 260)", "oklch(87% .02 260)", "oklch(95% .008 260)"] },
+      "slate": { "role": "neutral", "displayName": "Scrollbar slate", "tonalRamp": ["oklch(15% .015 260)", "oklch(27% .025 260)", "oklch(39% .04 260)", "oklch(51% .045 260)", "oklch(63% .04 260)", "oklch(75% .03 260)", "oklch(87% .02 260)", "oklch(95% .008 260)"] },
+      "surface": { "role": "neutral", "displayName": "Deep surface", "tonalRamp": ["oklch(15% .015 255)", "oklch(27% .025 255)", "oklch(39% .035 255)", "oklch(51% .04 255)", "oklch(63% .035 255)", "oklch(75% .025 255)", "oklch(87% .015 255)", "oklch(95% .006 255)"] },
+      "surface-hover": { "role": "neutral", "displayName": "Raised tonal surface", "tonalRamp": ["oklch(15% .015 255)", "oklch(27% .03 255)", "oklch(39% .045 255)", "oklch(51% .05 255)", "oklch(63% .045 255)", "oklch(75% .03 255)", "oklch(87% .02 255)", "oklch(95% .008 255)"] },
+      "field": { "role": "neutral", "displayName": "Recessed field", "tonalRamp": ["oklch(15% .015 255)", "oklch(27% .025 255)", "oklch(39% .035 255)", "oklch(51% .04 255)", "oklch(63% .035 255)", "oklch(75% .025 255)", "oklch(87% .015 255)", "oklch(95% .006 255)"] },
+      "line": { "role": "neutral", "displayName": "Field line", "tonalRamp": ["oklch(15% .015 260)", "oklch(27% .025 260)", "oklch(39% .04 260)", "oklch(51% .045 260)", "oklch(63% .04 260)", "oklch(75% .03 260)", "oklch(87% .02 260)", "oklch(95% .008 260)"] },
+      "error": { "role": "semantic", "displayName": "Error pink", "tonalRamp": ["oklch(15% .02 20)", "oklch(27% .05 20)", "oklch(39% .085 20)", "oklch(51% .12 20)", "oklch(63% .12 20)", "oklch(75% .1 20)", "oklch(87% .06 20)", "oklch(95% .02 20)"] },
+      "success": { "role": "semantic", "displayName": "Success mint", "tonalRamp": ["oklch(15% .015 165)", "oklch(27% .03 165)", "oklch(39% .05 165)", "oklch(51% .07 165)", "oklch(63% .08 165)", "oklch(75% .075 165)", "oklch(87% .045 165)", "oklch(95% .015 165)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Photographic hero", "purpose": "Desktop hero headline; responsive variants are recorded in DESIGN.md." },
+      "headline": { "displayName": "Section headline", "purpose": "Base section headings; page templates use observed overrides." },
+      "title": { "displayName": "Experience title", "purpose": "Experience-card headings." },
+      "body": { "displayName": "Body", "purpose": "Default readable copy and descriptions." },
+      "label": { "displayName": "Compact metadata", "purpose": "Navigation, metadata, labels and legal copy." },
+      "button": { "displayName": "Button", "purpose": "Primary and secondary enquiry actions." }
+    },
+    "shadows": [
+      { "name": "floating-whatsapp", "value": "0 5px 20px rgb(0 0 0 / .25)", "purpose": "Separates the fixed circular WhatsApp action from content." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Hero settle, image hover and action transforms." },
+      { "name": "button-background", "value": "background 180ms ease", "purpose": "Button background state changes." },
+      { "name": "button-press", "value": "transform 160ms cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Active button scale to .98." },
+      { "name": "image-hover", "value": "transform 500ms cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Fine-pointer experience-image scale to 1.035." },
+      { "name": "hero-settle", "value": "1.2s cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Hero image settles from scale 1.035 to 1." },
+      { "name": "reduced-motion", "value": "animation: none; transition: none; scroll-behavior: auto", "purpose": "Applied when prefers-reduced-motion is reduce." }
+    ],
+    "breakpoints": [
+      { "name": "mobile-max", "value": "700px" },
+      { "name": "collapsed-navigation-max", "value": "950px" },
+      { "name": "intermediate-max", "value": "1150px" },
+      { "name": "wide-min", "value": "1600px" }
+    ],
+    "tonalRampPolicy": "Tonal ramps are synthesized OKLCH preview metadata, not additional implementation tokens. Frontmatter colors remain normative.",
+    "focus": { "value": "3px solid var(--gold)", "offset": "5px", "packageOptionOffset": "3px" },
+    "artwork": { "source": "brand-source/DDTC-primary-client-original.png", "webInventory": "docs/LOGO-ASSETS.md", "navigation": "public/brand/ddtc-horizontal.svg", "mobile": "public/brand/ddtc-wordmark.svg", "footer": "public/brand/ddtc-white-gold.svg", "limitation": "Contour-derived web vectors approximate fine raster details and flatten gradients. The untouched primary PNG is the fidelity master; no print or trademark-master approval is implied." }
+  },
+  "components": [
+    {
+      "name": "Primary enquiry button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Saturated blue enquiry action with restrained corners and press feedback.",
+      "html": "<button class=\"ds-primary\">Plan Your Trip<svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:18px;background:var(--action);color:var(--white);padding:15px 24px;min-height:52px;font:600 14px/1.5 var(--font-body,'DM Sans'),sans-serif;border:0;border-radius:6px;cursor:pointer;transition:background 180ms ease,transform 160ms var(--ease-out)}.ds-primary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.ds-primary:active{transform:scale(.98)}.ds-primary:disabled{opacity:.6;cursor:wait}@media(hover:hover) and (pointer:fine){.ds-primary:hover{background:var(--action-hover)}}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Tonal alternative action using the same control geometry.",
+      "html": "<button class=\"ds-secondary\">View experiences</button>",
+      "css": ".ds-secondary{display:inline-flex;align-items:center;justify-content:center;gap:18px;background:var(--surface-hover);color:var(--white);padding:15px 24px;min-height:52px;font:600 14px/1.5 var(--font-body,'DM Sans'),sans-serif;border:0;border-radius:6px;cursor:pointer;transition:background 180ms ease,transform 160ms var(--ease-out)}.ds-secondary:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.ds-secondary:active{transform:scale(.98)}@media(hover:hover) and (pointer:fine){.ds-secondary:hover{background:var(--navy)}}@media(prefers-reduced-motion:reduce){.ds-secondary{transition:none}}"
+    },
+    {
+      "name": "Enquiry text field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "Visible label above a recessed field, with gold focus and error stroke.",
+      "html": "<label class=\"ds-label\">Full name<input class=\"ds-field\" name=\"full-name\" autocomplete=\"name\" placeholder=\"Your name\"/></label>",
+      "css": ".ds-label{display:block;max-width:340px;color:var(--white);font:400 13px/1.6 var(--font-body,'DM Sans'),sans-serif}.ds-field{display:block;width:calc(100% - 26px);background:var(--field);color:var(--white);border:1px solid var(--line);border-radius:6px;padding:13px 12px;font:400 15px/1.65 var(--font-body,'DM Sans'),sans-serif;margin-top:8px;min-height:23px;caret-color:var(--gold)}.ds-field::placeholder{color:var(--muted);opacity:.9}.ds-field:focus-visible{outline:3px solid var(--gold);outline-offset:5px}.ds-field[aria-invalid=true]{border-color:var(--error)}@media(max-width:700px){.ds-field{font-size:16px}}"
+    },
+    {
+      "name": "Desktop navigation links",
+      "kind": "nav",
+      "description": "Muted navigation with current-page white and gold hover; identity artwork is documented separately.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Example navigation\"><a href=\"#home\" aria-current=\"page\">Home</a><a href=\"#experiences\">Experiences</a><a href=\"#services\">Our Services</a></nav>",
+      "css": ".ds-nav{display:flex;gap:27px;align-items:center;flex-wrap:wrap;font:400 13px/1.65 var(--font-body,'DM Sans'),sans-serif}.ds-nav a{color:var(--muted);padding-block:14px;text-decoration:none;white-space:nowrap;transition:color 150ms ease}.ds-nav a[aria-current]{color:var(--white)}.ds-nav a:focus-visible{outline:3px solid var(--gold);outline-offset:5px}@media(hover:hover) and (pointer:fine){.ds-nav a:hover{color:var(--gold)}}@media(prefers-reduced-motion:reduce){.ds-nav a{transition:none}}"
+    },
+    {
+      "name": "Category filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Wrapping category buttons with a tonal pressed state.",
+      "html": "<div class=\"ds-filters\"><button aria-pressed=\"true\">All experiences</button><button aria-pressed=\"false\">Local getaways</button></div>",
+      "css": ".ds-filters{display:flex;gap:8px;flex-wrap:wrap}.ds-filters button{min-height:43px;border:0;border-radius:6px;background:transparent;color:var(--muted);padding:10px 18px;font:400 13px/1.65 var(--font-body,'DM Sans'),sans-serif;cursor:pointer;transition:color 150ms ease,background 150ms ease}.ds-filters button[aria-pressed=true]{background:var(--surface-hover);color:var(--white)}.ds-filters button:focus-visible{outline:3px solid var(--gold);outline-offset:5px}@media(hover:hover) and (pointer:fine){.ds-filters button:hover{background:var(--surface);color:var(--white)}}@media(prefers-reduced-motion:reduce){.ds-filters button{transition:none}}"
+    },
+    {
+      "name": "Story preview panel",
+      "kind": "card",
+      "refersTo": "story-card",
+      "description": "Quiet tonal panel with champagne location and ivory copy.",
+      "html": "<article class=\"ds-story\"><div class=\"ds-place\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><path d=\"M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z\"/><circle cx=\"12\" cy=\"10\" r=\"3\"/></svg>Cape Town</div><p>Explore. Experience. Create Memories.</p></article>",
+      "css": ".ds-story{max-width:440px;background:var(--surface);border-radius:10px;padding:37px;font-family:var(--font-body,'DM Sans'),sans-serif}.ds-place{display:flex;align-items:center;gap:9px;color:var(--gold);font-size:14px;line-height:1.65;margin-bottom:20px}.ds-story p{color:var(--ivory);font-size:20px;line-height:1.65;margin:0}@media(max-width:950px){.ds-story{padding:25px}.ds-story p{font-size:18px}}"
+    },
+    {
+      "name": "Package choice",
+      "kind": "custom",
+      "refersTo": "package-option",
+      "description": "A labelled radio choice with navy selected surface, ocean stroke and gold keyboard focus.",
+      "html": "<label class=\"ds-option\"><input type=\"radio\" name=\"ds-package\" checked/>Package preference<span class=\"ds-radio\" aria-hidden=\"true\"><svg width=\"12\" height=\"12\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\"><path d=\"m5 12 4 4L19 6\"/></svg></span></label>",
+      "css": ".ds-option{display:flex;align-items:center;gap:12px;position:relative;max-width:300px;font:400 13px/1.65 var(--font-body,'DM Sans'),sans-serif;color:var(--white);background:var(--field);padding:15px 12px;border-radius:6px;cursor:pointer;outline:1px solid transparent}.ds-option input{position:absolute;opacity:0}.ds-option:has(input:checked){background:var(--navy);outline-color:var(--ocean)}.ds-option:has(input:focus-visible){outline:3px solid var(--gold);outline-offset:3px}.ds-radio{width:18px;height:18px;margin-left:auto;border-radius:50%;outline:1px solid var(--muted);display:flex;align-items:center;justify-content:center}.ds-radio svg{visibility:hidden}.ds-option:has(input:checked) .ds-radio{background:var(--action);outline:0}.ds-option:has(input:checked) .ds-radio svg{visibility:visible}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Minimal dark cinematic DDTC",
+    "overview": "The approved DDTC world uses midnight backgrounds, broad destination photographs, white sans-serif headings and quiet champagne details. Saturated blue identifies the main enquiry actions. Generous margins and unboxed experience cards give photography the largest visual role while practical trip information remains readable.\n\nThe official client-selected logo is a binding identity asset. Its original serif lettering, travel emblem and gold detail coexist with the interface's sans-serif typography. This document records the implemented website; it establishes no additional print, trademark or corporate artwork rules.",
+    "keyCharacteristics": [
+      "Midnight canvas with tonal navy surfaces.",
+      "Destination photography with restrained corners and dark text scrims.",
+      "Plus Jakarta Sans headings and DM Sans body text.",
+      "Blue enquiry actions, champagne details and visible keyboard focus.",
+      "Original DDTC artwork adapted to navigation and full footer contexts."
+    ],
+    "rules": [
+      { "name": "The Action Color Rule", "body": "Use action blue for the existing action and selected-state roles; retain champagne for details and keyboard focus.", "section": "colors" },
+      { "name": "The Artwork Lettering Rule", "body": "Preserve the original outlined DDTC letters; never recreate the logo by typing a substitute serif face.", "section": "typography" }
+    ],
+    "dos": [
+      "Do preserve the official source artwork and its original serif DDTC contours.",
+      "Do use the horizontal, compact and full white/gold variants in their existing navigation and footer contexts.",
+      "Do maintain intrinsic logo aspect ratios and the implemented responsive header dimensions.",
+      "Do preserve white and ivory text, muted supporting copy, blue actions and champagne focus on the dark canvas.",
+      "Do keep keyboard focus visible and honor reduced-motion preferences."
+    ],
+    "donts": [
+      "Don't replace the supplied DDTC artwork with generic travel symbols or typed lettering.",
+      "Don't turn the raster-derived SVG family into an unqualified claim of original vector-master fidelity.",
+      "Don't infer new corporate proportions, clear-space requirements or print approval from these web adaptations.",
+      "Don't replace the approved navy palette or locally hosted font pairing during routine extensions."
+    ]
+  }
+}

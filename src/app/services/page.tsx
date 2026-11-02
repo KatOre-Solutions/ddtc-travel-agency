@@ -1,0 +1,16 @@
+import Link from 'next/link';
+import { ArrowUpRight } from 'lucide-react';
+import { PageIntro } from '@/components/page-intro';
+import { Photograph } from '@/components/photograph';
+import { EnquiryCTA } from '@/components/enquiry-cta';
+import { metadata } from '@/lib/site';
+export const generateMetadata = () => metadata('Our Services', 'DDTC plans travel for individuals, couples, families, social and corporate groups, with assistance for MSC cruise experiences.', '/services');
+const services = [
+  { id: 'individual', title: 'A little time for you.', type: 'Individual & couples travel', text: 'A solo escape or time together. Tell us the places you have in mind, your dates and your budget, and we’ll help bring the travel arrangements together.', image: 'cape-town-coast.jpg', alt: 'Clifton beach in Cape Town', destination: 'Individual or couples holiday' },
+  { id: 'family', title: 'Memories for everyone.', type: 'Family holidays', text: 'Shared days away, with the details considered. We help families plan their transport and accommodation around the people travelling and the experiences they want to share.', image: 'durban-beachfront.jpg', alt: 'The Durban beachfront at dawn', destination: 'Family holiday' },
+  { id: 'groups', title: 'Better with your people.', type: 'Social group travel', text: 'Friends, celebrations and long-overdue catch-ups. Join an advertised small-group journey or speak to DDTC about planning travel for your own group.', image: 'blyde-river-canyon.jpg', alt: 'Mpumalanga’s Blyde River Canyon', destination: 'Social group trip' },
+  { id: 'corporate', title: 'Take your team further.', type: 'Corporate travel', text: 'Travel planning for company groups, with coordinated transport and accommodation. Share your team’s dates, group size and requirements so DDTC can discuss the right arrangements.', image: 'johannesburg-skyline.jpg', alt: 'Johannesburg skyline at sunset', destination: 'Corporate group trip' },
+];
+export default function Services() {
+  return <><PageIntro title="Your people. Your kind of journey."><p>From a quiet escape to a whole group on the move, we help with the planning that brings it together.</p></PageIntro><div className="container services-editorial">{services.map((service) => <section className="service-editorial" id={service.id} key={service.id}><Photograph src={service.image} alt={service.alt}/><div><h2>{service.title}</h2><h3>{service.type}</h3><p>{service.text}</p><Link className="text-link" href={`/contact?${new URLSearchParams({ destination: service.destination })}`}>Plan Your Trip <ArrowUpRight size={18}/></Link></div></section>)}<section className="service-editorial" id="cruises"><Photograph src="cruise-ocean.jpg" alt="Representative cruise ships near Santorini"/><div><h2>A new view every morning.</h2><h3>Cruise experiences</h3><p>DDTC assists travellers interested in MSC cruise experiences. Ask about your preferred sailing dates, destination, cabin needs and the arrangements you would like help with.</p><p className="small muted">Sailings, fares, availability and operator conditions must be confirmed. Photography is representative cruise imagery.</p><Link className="text-link" href="/contact?destination=Cruise%20experience">Enquire about a cruise <ArrowUpRight size={18}/></Link></div></section></div><EnquiryCTA/></>;
+}

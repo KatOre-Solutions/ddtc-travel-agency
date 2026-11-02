@@ -1,0 +1,32 @@
+{
+  "ddtc-primary": {
+    "width": 1536,
+    "height": 1024,
+    "hasAlpha": true
+  },
+  "ddtc-horizontal": {
+    "width": 1168,
+    "height": 269,
+    "hasAlpha": true
+  },
+  "ddtc-white-gold": {
+    "width": 1536,
+    "height": 1044,
+    "hasAlpha": true
+  },
+  "ddtc-navy": {
+    "width": 1536,
+    "height": 1044,
+    "hasAlpha": true
+  },
+  "ddtc-wordmark": {
+    "width": 1155,
+    "height": 228,
+    "hasAlpha": true
+  },
+  "ddtc-favicon": {
+    "width": 512,
+    "height": 512,
+    "hasAlpha": true
+  }
+}

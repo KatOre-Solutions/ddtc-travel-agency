@@ -1,0 +1,17 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+*.tsbuildinfo
+playwright-report/
+test-results/
+.taste-skill/
+.impeccable/review/
+.impeccable/assets/
+.impeccable/mocks/
+*.log
+.tools/
+__pycache__/
+.codex/
+.impeccable/config.local.json
