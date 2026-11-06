@@ -3,7 +3,7 @@ import { PageIntro } from '@/components/page-intro';
 import { EnquiryForm } from '@/components/enquiry-form';
 import { getExperience, tripDates } from '@/lib/experiences';
 import { company, metadata, whatsapp } from '@/lib/site';
-export const generateMetadata = () => metadata('Plan Your Trip', 'Tell DDTC where you would like to go. Enquire about advertised experiences, family holidays, group trips and cruise travel.', '/contact');
+export const generateMetadata = () => metadata('Contact & Travel Enquiries', 'Contact DDTC Travel Agency in Rabokala, Brits. Call or WhatsApp +27 64 058 4396 for holiday packages, group trips and travel enquiries.', '/contact');
 export default async function Contact({ searchParams }: { searchParams: Promise<{ trip?: string; package?: string; destination?: string }> }) {
   const query = await searchParams;
   const trip = query.trip ? getExperience(query.trip) : undefined;

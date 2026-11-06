@@ -1,7 +1,9 @@
 import type { MetadataRoute } from 'next';
-import { siteUrl } from '@/lib/site';
+import { absoluteUrl } from '@/lib/site';
 import { experiences } from '@/lib/experiences';
 export default function sitemap(): MetadataRoute.Sitemap {
-  if (!siteUrl) return [];
-  return ['/', '/about', '/services', '/experiences', '/reviews', '/contact', '/photo-credits', ...experiences.map((trip) => `/experiences/${trip.id}`)].map((path) => ({ url: `${siteUrl}${path}`, changeFrequency: 'monthly' as const, priority: path === '/' ? 1 : 0.7 }));
+  return [
+    ...['/', '/about', '/services', '/experiences', '/reviews', '/contact', '/photo-credits'].map((path) => ({ url: absoluteUrl(path) })),
+    ...experiences.map((trip) => ({ url: absoluteUrl(`/experiences/${trip.id}`), images: [absoluteUrl(`/images/${trip.image}`)] })),
+  ];
 }

@@ -4,7 +4,7 @@ import { PageIntro } from '@/components/page-intro';
 import { Photograph } from '@/components/photograph';
 import { EnquiryCTA } from '@/components/enquiry-cta';
 import { metadata } from '@/lib/site';
-export const generateMetadata = () => metadata('Our Services', 'DDTC plans travel for individuals, couples, families, social and corporate groups, with assistance for MSC cruise experiences.', '/services');
+export const generateMetadata = () => metadata('Holiday & Group Travel Services', 'Explore holiday planning for couples, families, social and corporate groups with DDTC in Rabokala, Brits, plus assistance with cruise enquiries.', '/services');
 const services = [
   { id: 'individual', title: 'A little time for you.', type: 'Individual & couples travel', text: 'A solo escape or time together. Tell us the places you have in mind, your dates and your budget, and we’ll help bring the travel arrangements together.', image: 'cape-town-coast.jpg', alt: 'Clifton beach in Cape Town', destination: 'Individual or couples holiday' },
   { id: 'family', title: 'Memories for everyone.', type: 'Family holidays', text: 'Shared days away, with the details considered. We help families plan their transport and accommodation around the people travelling and the experiences they want to share.', image: 'durban-beachfront.jpg', alt: 'The Durban beachfront at dawn', destination: 'Family holiday' },

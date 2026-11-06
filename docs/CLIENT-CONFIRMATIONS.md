@@ -7,7 +7,7 @@ The trip sections distinguish supplied facts from actual gaps or unclear wording
 ## One-time business and publication checks
 
 - Approve the supplied package information for current publication and identify any changed dates, prices, capacity or availability. This is a single freshness check, not a request to resend the facts printed on each poster.
-- Confirm the production domain. Some posters print ddtctravelagency.co.za; the approved brief says a final domain has not been selected.
+- Production domain confirmed on 6 November 2026: https://www.ddtctravels.co.za/. This supersedes the older poster domain; canonical URLs and SEO use the confirmed domain.
 - Resolve the official email spelling: the posters and brief differ. The website currently uses the brief's diutlwilengdiutlwileng74@gmail.com.
 - Approve final privacy and booking wording. All posters that specify a deposit label it non-refundable; the Christmas poster states no separate deposit or non-refundable condition. The posters do not provide a full cancellation/refund/rescheduling policy.
 - Configure and verify email delivery only if enabling it; the WhatsApp enquiry path already works.

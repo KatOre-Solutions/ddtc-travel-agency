@@ -83,7 +83,7 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     inclusions: lesothoInclusions, activities: ['Afriski Mountain Resort', 'Golden Gate Highlands National Park', 'Clarens', 'Lesotho mountain scenery'],
     requirements: crossBorder, verification: lesothoVerification,
     sources: season === 'winter' ? [poster('19.10.59'), poster('19.11.01')] : [poster('19.11.01')],
-    seo: { title: `Lesotho ${season === 'winter' ? 'Winter Escape · June' : 'Mountain Adventure · August'} 2027`, description: 'Discover DDTC’s advertised four-day Lesotho getaway with return road transport, breakfast, Golden Gate and Clarens visits.' },
+    seo: { title: `Lesotho ${season === 'winter' ? 'Winter Escape · June' : 'Mountain Adventure · August'} 2027`, description: `Explore DDTC’s advertised Lesotho trip for ${season === 'winter' ? '24–27 June' : '19–22 August'} 2027, with return road transport, breakfast, Afriski, Golden Gate and Clarens visits.` },
   })),
   {
     ...base, id: 'durban-christmas-2027', title: 'Durban Christmas Escape', destination: 'Durban', country: 'South Africa', category: 'Beach holidays',

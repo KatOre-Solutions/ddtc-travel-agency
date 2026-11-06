@@ -7,7 +7,7 @@ import TestimonialMarquee from '@/components/ui/marquee-01';
 import { experiences } from '@/lib/experiences';
 import { publishedReviews } from '@/lib/reviews';
 import { metadata } from '@/lib/site';
-export const generateMetadata = () => metadata('Explore More. Create Memories.', 'Thoughtfully planned holidays from DDTC Travel Agency. Discover Cape Town, Mpumalanga, Durban and journeys beyond.', '/');
+export const generateMetadata = () => metadata('Travel Agency in Brits', 'DDTC Travel Agency in Rabokala, Brits plans South African holidays, international packages and group travel. Explore trips and enquire on WhatsApp.', '/');
 export default function Home() {
   return <>
     <section className="hero container-wide" aria-labelledby="hero-title"><Photograph className="hero-photo" src="cape-town-hero.jpg" alt="Panoramic Cape Town coastline with the Atlantic Ocean and mountains" priority sizes="100vw"/><div className="hero-scrim"/>

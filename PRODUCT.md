@@ -6,7 +6,7 @@
 web
 
 ## Stack
-Next.js App Router, TypeScript and Tailwind CSS, as requested in the approved implementation brief. Local development first; prepared for Vercel. No deployment authorized.
+Next.js App Router, TypeScript and Tailwind CSS, as requested in the approved implementation brief. Prepared for Vercel; deployments require authorization. The live production domain, confirmed on 6 November 2026, is https://www.ddtctravels.co.za/.
 
 ## Users
 Individuals, couples, families, social groups and corporate travellers looking for accessible, thoughtfully planned holidays.

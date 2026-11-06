@@ -4,18 +4,21 @@ import { ArrowLeft, CalendarDays, Check, Clock3, Info, MapPin, Users, X } from '
 import { Photograph } from '@/components/photograph';
 import { PackageSelector } from '@/components/package-selector';
 import { ExperienceCard } from '@/components/experience-card';
+import { JsonLd } from '@/components/json-ld';
 import { experiences, duration, getExperience, isPastTrip, tripDates } from '@/lib/experiences';
 import { metadata } from '@/lib/site';
+import { tripBreadcrumbs } from '@/lib/seo';
 export const generateStaticParams = () => experiences.map((trip) => ({ slug: trip.id }));
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const trip = getExperience((await params).slug);
-  return trip ? metadata(trip.seo.title, trip.seo.description, `/experiences/${trip.id}`) : { title: 'Experience not found' };
+  if (!trip) notFound();
+  return metadata(trip.seo.title, trip.seo.description, `/experiences/${trip.id}`, false, { src: trip.image, alt: trip.imageAlt });
 }
 export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
   const trip = getExperience((await params).slug);
   if (!trip) notFound();
   const related = experiences.filter((item) => item.id !== trip.id && !item.id.startsWith(trip.id.split('-')[0])).slice(0, 3);
-  return <><div className="container trip-intro"><Link href="/experiences" className="back-link"><ArrowLeft size={16}/> All experiences</Link><div className="trip-title-row"><h1>{trip.title}</h1><p><MapPin size={17}/>{trip.country}</p></div><div className="trip-facts"><span><CalendarDays size={17}/>{tripDates(trip)}</span><span><Clock3 size={17}/>{duration(trip)}</span>{trip.groupSize && <span><Users size={17}/>Advertised group: {trip.groupSize} travellers</span>}</div></div>
+  return <><JsonLd data={tripBreadcrumbs(trip)}/><div className="container trip-intro"><Link href="/experiences" className="back-link"><ArrowLeft size={16}/> All experiences</Link><div className="trip-title-row"><h1>{trip.title}</h1><p><MapPin size={17}/>{trip.country}</p></div><div className="trip-facts"><span><CalendarDays size={17}/>{tripDates(trip)}</span><span><Clock3 size={17}/>{duration(trip)}</span>{trip.groupSize && <span><Users size={17}/>Advertised group: {trip.groupSize} travellers</span>}</div></div>
     <div className="container trip-photo"><Photograph src={trip.image} alt={trip.imageAlt} priority sizes="100vw"/></div>
     <div className="container trip-layout"><div className="trip-copy">{isPastTrip(trip) && <p className="notice">This departure date has passed. Ask DDTC about a future journey.</p>}<section><h2>A little closer to being there.</h2><p className="lead">{trip.description}</p>{trip.durationNote && <p>{trip.durationNote}</p>}{trip.accommodation && <p><strong>Advertised accommodation:</strong> {trip.accommodation}</p>}</section>
     <section className="trip-list-section"><h2>What’s part of the plan.</h2><ul className="check-list">{trip.inclusions.map((item) => <li key={item}><Check size={17}/><span>{item}</span></li>)}</ul></section>

@@ -70,10 +70,12 @@ For a public/serverless deployment, add a shared rate limiter and provider abuse
 
 ## Prepare for deployment
 
-The project is compatible with Vercel’s Next.js build. Use `npm run build` and configure the email variables in the hosting provider. Set `NEXT_PUBLIC_SITE_URL` only after the final domain is confirmed. Then review `ALLOW_INDEXING`; it defaults to false. Do not publish draft terms or unapproved customer stories. Request approval before production deployment.
+The confirmed production domain is `https://www.ddtctravels.co.za`. The project is compatible with Vercel’s Next.js build. Use `npm run build` and configure email variables only if enabling email delivery. The canonical URL defaults to the confirmed domain; set `NEXT_PUBLIC_SITE_URL` to that same origin in hosting. Production indexing now defaults to enabled. Remove any old `ALLOW_INDEXING=false` production setting or set it to true, then rebuild. Vercel preview/development builds remain noindexed, and noncanonical hosts receive an `X-Robots-Tag: noindex, nofollow` response header. For other staging platforms set `ALLOW_INDEXING=false`. Request approval before production deployment.
 
-The sitemap contains no invented domain. Draft legal pages have noindex metadata, and robots blocks indexing by default. The public business schema contains only supplied contact facts, with no aggregate ratings or partnership claims.
+The sitemap lists 19 canonical public pages, including all twelve trips and their destination images; legal drafts and query variants are excluded. Legal drafts retain noindex metadata but remain crawlable so crawlers can read that directive. The apex domain redirects to the confirmed www domain, preserving paths and query strings. Public pages include branded titles, descriptions, canonical URLs and Open Graph/Twitter large-image previews; trips use their own destination image and breadcrumb structured data. Business/website structured data uses supplied facts and logo assets without aggregate ratings or partnership claims. See `docs/SEO.md` for the audit, checks and Search Console follow-up.
 
 ## Reference documentation
+
+Crawler files are served at `/robots.txt` and `/llms.txt`. Next.js generates the robots file from `src/app/robots.ts`; the LLM overview is generated from the existing business and trip records by `src/app/llms.txt/route.ts`.
 
 [Next.js metadata](https://nextjs.org/docs/app/api-reference/functions/generate-metadata), [Next.js images](https://nextjs.org/docs/app/getting-started/images), [Resend send-email API](https://resend.com/docs/api-reference/emails/send-email).
