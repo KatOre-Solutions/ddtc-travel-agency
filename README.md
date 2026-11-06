@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:3000. Five named customer reviews with confirmed five-star ratings and publication permission appear on the reviews page, with an excerpt on the homepage.
+Open http://127.0.0.1:3000. Five named customer reviews with confirmed five-star ratings and publication permission appear on the reviews page and in the homepage's two-row review marquee.
 
 ```powershell
 npm run typecheck
@@ -29,6 +29,7 @@ Browser tests expect the local server on port 3000 and installed Microsoft Edge.
 - `src/app`: homepage, about, services, catalogue, twelve trip pages, reviews, contact, privacy, booking information, photo credits, error/404 pages, robots and sitemap.
 - `src/lib/experiences.ts`: typed trip records and runtime validation. Each trip’s source posters and verification questions remain attached to its record.
 - `src/components`: shared navigation, footer, photo, experience card, filters, package selector and enquiry form.
+- `src/components/ui`: shadcn-compatible primitives and the supplied review marquee adaptation. The `@` alias maps to `src`, so `@/components/ui` resolves here. `components.json` records these aliases and the existing Tailwind 4 stylesheet; no new project or Tailwind setup is needed. Card primitives use the standard `clsx`/`tailwind-merge` helper in `src/lib/utils.ts`.
 - `src/app/globals.css`: approved DDTC tokens and responsive composition.
 - `events/`: immutable original content references. They are not served as production graphics.
 - `docs/POSTER-EXTRACTION.md`: the full extraction from all twelve source posters.
@@ -57,7 +58,7 @@ The client-selected official logo is preserved in `brand-source/DDTC-primary-cli
 
 ## Approve a testimonial
 
-Edit `src/lib/reviews.ts`. The five current reviews, names, publication permission and five-star ratings were confirmed by the client through the site owner on 6 November 2026. Original submissions and editing notes are preserved in `docs/REVIEW-SOURCES.md`. Keep each reviewer's meaning and voice; do not add unsupported claims, portraits, surnames, destinations or ratings. Leave new entries unapproved until permission is confirmed, and use a null rating unless the rating is confirmed. Both the reviews page and homepage use only approved records. The reviews page is eligible for indexing when the site-wide launch switch is enabled.
+Edit `src/lib/reviews.ts`. The five current reviews, names, publication permission and five-star ratings were confirmed by the client through the site owner on 6 November 2026. Original submissions and editing notes are preserved in `docs/REVIEW-SOURCES.md`. Keep each reviewer's meaning and voice; do not add unsupported claims, portraits, surnames, destinations or ratings. Leave new entries unapproved until permission is confirmed, and use a null rating unless the rating is confirmed. Both the reviews page and homepage use only approved records. The marquee shows their excerpts with opposing rows, pause/resume and hover/touch pause; reduced-motion preferences show a static list. Decorative repeat groups are hidden from screen readers. The reviews page is eligible for indexing when the site-wide launch switch is enabled.
 
 ## Enquiry delivery
 
