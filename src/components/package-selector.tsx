@@ -12,6 +12,6 @@ export function PackageSelector({ trip }: { trip: Experience }) {
     <div className="selected-price" aria-live="polite"><span className="small muted">Advertised package price</span><p>{money(selected.price)}<span>{trip.id.startsWith('gold-reef') ? 'pricing basis to confirm' : 'per person'}</span></p><p className="deposit-info">{selected.deposit ? `Advertised deposit ${money(selected.deposit)}` : 'Deposit to confirm with DDTC'}</p></div>
     {selected.departure && <p className="small">Road departure: {new Intl.DateTimeFormat('en-ZA', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${selected.departure}T12:00:00Z`))}</p>}
     {selected.inclusions.length > 0 && <ul className="check-list small">{selected.inclusions.map((item) => <li key={item}><Check size={15}/><span>{item}</span></li>)}</ul>}
-    <Link className="button full-width" href={`/contact?${query}`}>Enquire About This Trip <ArrowUpRight size={18}/></Link><p className="small muted package-disclaimer">Confirm price and availability with DDTC.<br/>No payment or reservation is made here.</p>
+    <Link className="button button-booking full-width" href={`/contact?${query}`}>Enquire About This Trip <ArrowUpRight size={18}/></Link><p className="small muted package-disclaimer">Confirm price and availability with DDTC.<br/>No payment or reservation is made here.</p>
   </aside>;
 }

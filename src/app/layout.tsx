@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   robots: robotsMetadata(),
   applicationName: company.name,
 };
-export const viewport: Viewport = { themeColor: '#101722', colorScheme: 'dark' };
+export const viewport: Viewport = { themeColor: '#ffffff', colorScheme: 'light' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return <html lang="en-ZA" className={`${jakarta.variable} ${dm.variable}`}><body><a className="skip-link" href="#main">Skip to content</a><Header/><main id="main">{children}</main><Footer/><SectionMotion/><JsonLd data={websiteSchema()}/></body></html>;
 }

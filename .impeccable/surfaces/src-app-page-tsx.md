@@ -11,11 +11,11 @@ Mode: Persuade. The approved implementation brief already fixes the visual world
 ## Direction contract
 THESIS: On this page DDTC's real calendar of small-group journeys becomes an invitation to choose a memory, with full destination photography and transparent package detail.
 
-OWN-WORLD: Midnight navy, white sans-serif typography, quiet champagne detail and a single saturated blue action. Panoramic coast hero, unboxed photographic experience cards, broad margins, restrained corners. Plus Jakarta Sans and DM Sans are pinned by the client.
+OWN-WORLD: Client-approved light theme: white and Coastal Mist surfaces, navy typography, blue navigation, red primary enquiry actions, and restrained gold detail. Preserve the panoramic coast hero, unboxed photographic cards, broad margins, corners, Plus Jakarta Sans, and DM Sans.
 
 STORY: Understand DDTC's accessible planned holidays, explore actual trips, learn who plans them, then enquire with a package preference. Five named customer reviews and their five-star ratings are approved for publication. The homepage displays an attributed excerpt linked to the full reviews page.
 
-FIRST VIEWPORT: Compact horizontal DDTC wordmark and navigation above a broad coastal photograph. Large left-aligned two-line white title overlays its dark left edge; short supporting sentence and blue Plan Your Trip button remain immediately visible. A quiet Cape Town location caption anchors the opposite lower corner. Below it, a heading and three destination photographs introduce the catalogue. The working package selector is the signature interaction, changing the enquiry context and displaying the real advertised price.
+FIRST VIEWPORT: Existing navy DDTC wordmark and white navigation above the same coastal photograph. Large left-aligned two-line navy title overlays a neutral light scrim; the supporting sentence and red Plan Your Trip action remain immediately visible. Light caption surfaces preserve legibility. A stronger tablet scrim protects the long headline; the mobile scrim fades vertically. The existing package selector remains the signature interaction, changing enquiry context and displaying the real advertised price.
 
 FORM: User-pinned minimalist cinematic travel direction. seed: none (pinned brief; concept tournament does not replace approved identity). Taste Skill's place-carries-it composition is used with explicit brief overrides for header, CTA and page hierarchy. No synthetic photo comp is required for the fixed brief.
 

@@ -1,23 +1,28 @@
 ---
 name: DDTC Travel Agency
-description: Minimal dark cinematic travel with destination photography and the official DDTC identity.
+description: Bright coastal travel with the existing destination photography and official DDTC identity.
 colors:
-  background: "#101722"
-  navy: "#10294b"
-  ocean: "#1877a5"
-  action: "#1764f5"
-  action-hover: "#397cf7"
-  gold: "#d6ad64"
-  ivory: "#f8f6f1"
+  background: "#ffffff"
+  navy: "#041855"
+  ocean: "#089eee"
+  action: "#0463c5"
+  action-hover: "#034f9d"
+  booking: "#c81024"
+  booking-hover: "#a40d1e"
+  soft-red: "#fff3f4"
+  gold: "#f6b913"
+  gold-ink: "#856006"
+  ivory: "#42566f"
   white: "#ffffff"
-  muted: "#a8b3c5"
-  slate: "#334155"
-  surface: "#17212e"
-  surface-hover: "#202e40"
-  field: "#111b28"
-  line: "#344154"
-  error: "#ffb5b5"
-  success: "#a1d7c2"
+  muted: "#42566f"
+  slate: "#71849a"
+  surface: "#f2f8ff"
+  surface-hover: "#e3f0ff"
+  field: "#ffffff"
+  line: "#dce6f0"
+  field-border: "#71849a"
+  error: "#a40d1e"
+  success: "#186343"
 typography:
   display:
     fontFamily: "Plus Jakarta Sans, sans-serif"
@@ -67,172 +72,77 @@ spacing:
   card-gap: "27px"
   compact-section: "52px"
   section: "85px"
-components:
-  button-primary:
-    backgroundColor: "{colors.action}"
-    textColor: "{colors.white}"
-    typography: "{typography.button}"
-    rounded: "{rounded.control}"
-    padding: "15px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.action-hover}"
-  button-secondary:
-    backgroundColor: "{colors.surface-hover}"
-    textColor: "{colors.white}"
-    typography: "{typography.button}"
-    rounded: "{rounded.control}"
-    padding: "15px 24px"
-  button-secondary-hover:
-    backgroundColor: "{colors.navy}"
-  field:
-    backgroundColor: "{colors.field}"
-    textColor: "{colors.white}"
-    rounded: "{rounded.control}"
-    padding: "13px 12px"
-  filter:
-    textColor: "{colors.muted}"
-    rounded: "{rounded.control}"
-    padding: "10px 18px"
-  filter-selected:
-    backgroundColor: "{colors.surface-hover}"
-    textColor: "{colors.white}"
-  story-card:
-    backgroundColor: "{colors.surface}"
-    rounded: "{rounded.card}"
-    padding: "37px"
-  package-panel:
-    backgroundColor: "{colors.surface}"
-    rounded: "{rounded.card}"
-    padding: "29px"
-  package-option:
-    backgroundColor: "{colors.field}"
-    rounded: "{rounded.control}"
-    padding: "15px 12px"
-  package-option-selected:
-    backgroundColor: "{colors.navy}"
 ---
 
-# Design System: DDTC Travel Agency
+# Design system: DDTC Travel Agency
 
-## Overview
+## Direction
 
-**Creative North Star: "Minimal dark cinematic DDTC"**
+The client-approved light brand refinement of 6 November 2026 supersedes the previous dark theme. Preserve the site people already like: its page structure, copy, typography, photography, package information, routes, SEO, and enquiry behavior. The visual direction is bright, coastal, welcoming, and professional.
 
-The approved DDTC world uses midnight backgrounds, broad destination photographs, white sans-serif headings and quiet champagne details. Saturated blue identifies the main enquiry actions. Generous margins and unboxed experience cards give photography the largest visual role while practical trip information remains readable.
+White and Coastal Mist dominate. Navy establishes hierarchy; Travel Blue identifies navigation, links, filters, and secondary actions. Destination Red is reserved for primary trip-planning and enquiry actions. Gold supplies restrained warmth in review stars and the existing logo. The palette is pinned by the brief; no replacement visual concept or new image sourcing is required.
 
-The official client-selected logo is a binding identity asset. Its original serif lettering, travel emblem and gold detail coexist with the interface's sans-serif typography. This document records the implemented website; it establishes no additional print, trademark or corporate artwork rules.
+The CSS custom properties in `src/app/globals.css` are the runtime source of truth. Frontmatter records the same values. `--ink` aliases navy, `--focus` aliases action blue, and the existing `--ivory` name now aliases body-text colour for compatibility. The root and exported Next.js viewport use a light colour scheme and white browser theme.
 
-**Key Characteristics:**
-- Midnight canvas with tonal navy surfaces.
-- Destination photography with restrained corners and dark text scrims.
-- Plus Jakarta Sans headings and DM Sans body text.
-- Blue enquiry actions, champagne details and visible keyboard focus.
-- Original DDTC artwork adapted to navigation and full footer contexts.
+## Colour roles and contrast
 
-## Colors
+| Role | Colour | Usage |
+| --- | --- | --- |
+| Canvas | #FFFFFF | Page, navigation, footer, inputs |
+| Coastal Mist | #F2F8FF | Services, closing CTA, form, notices, review surfaces |
+| Ocean Navy | #041855 | Headings, principal text, wordmark |
+| Travel Blue | #0463C5 | Links, selection, focus, secondary actions |
+| Blue hover | #034F9D | Hover on blue actions and links |
+| Sky Blue | #089EEE | Supporting brand accent token |
+| Destination Red | #C81024 | Primary booking and enquiry buttons |
+| Red hover / error | #A40D1E | Primary hover and labelled errors |
+| Soft red | #FFF3F4 | Invalid input background |
+| Sunshine Gold | #F6B913 | Decorative rating fill |
+| Gold outline | #856006 | Legible star silhouette on light surfaces |
+| Body text | #42566F | Paragraphs, captions, supporting information |
+| Selected surface | #E3F0FF | Selected packages and filters |
+| Subtle line | #DCE6F0 | Quiet separations |
+| Field border / scrollbar | #71849A | Visible input boundaries |
+| Success | #186343 | Confirmed submission feedback |
 
-The palette pairs a dark blue foundation with clear white type, a single saturated action blue and warm champagne detail. Frontmatter values are normative and mirror the stylesheet custom properties.
+Measured WCAG contrast: navy/white 16.57:1; body/white 7.52:1; body/mist 7.04:1; white/red 5.91:1; white/red hover 7.91:1; blue/mist 5.46:1; blue/selected surface 5.05:1; field border/white 3.84:1; error/soft red 7.30:1; success/white 7.23:1; gold outline/mist 5.35:1. Gold is never primary text on white. Error messages remain explicit text associated with invalid fields, not colour alone.
 
-### Primary
-- **Action blue** (`action`, `action-hover`): enquiry buttons, selected radio indicators, text selection and image-card arrow hover.
-- **Brand navy** (`navy`): closing enquiry band, selected package options, photo note and floating WhatsApp action.
+## Typography and layout
 
-### Secondary
-- **Champagne gold** (`gold`): focus outlines, icon details, quiet emphasis, caret and text-link hover.
-- **Ocean blue** (`ocean`): selected package-option outline.
+Keep locally hosted Plus Jakarta Sans for headings and DM Sans for body copy. The outlined serif logo is artwork, not a third interface font. Heading sizes and weights, grid geometry, section order, image crops, and responsive breakpoints are retained. Marquee quotes are 16px; review initials and trip labels are at least 13px.
 
-### Neutral
-- **Midnight canvas** (`background`): page background and the dark browser theme.
-- **Deep surface** (`surface`, `surface-hover`, `field`): panels, selected filters, secondary buttons and form fields.
-- **White and ivory** (`white`, `ivory`): main text and softer text over photographs.
-- **Muted blue-grey** (`muted`): descriptions, metadata, navigation and legal text.
-- **Slate and line** (`slate`, `line`): scrollbar thumb and field strokes.
-- **Error pink and success mint** (`error`, `success`): validation and submission feedback.
+The standard content container caps at 1240px with 112px total horizontal subtraction, then 72px up to 1150px and 40px up to 700px. Wide photographs cap at 1512px with 48px subtraction; at 1600px and above the cap is 1600px with 80px subtraction. Mobile wide containers subtract 24px. Normal section padding is 85px, 52px on mobile.
 
-**The Action Color Rule.** Use action blue for the existing action and selected-state roles; retain champagne for details and keyboard focus.
+Experience grids retain three columns with 27px gaps and 48px row gaps, two columns up to 950px, one up to 700px. Editorial splits collapse on mobile. Trip package selection moves above the copy on mobile. Headers remain 100px on desktop, 84px on tablet, and 80px on mobile. Navigation artwork is 230px wide, 210px at intermediate widths, and 152px on mobile. Full footer artwork remains 220–250px wide.
 
-## Typography
+## Photography and hero
 
-**Display Font:** Plus Jakarta Sans, with sans-serif fallback.
-**Body Font:** DM Sans, with sans-serif fallback.
+Keep all existing licensed destination images and their attribution. A neutral white scrim replaces the dark hero overlay, retaining the coastal panorama and the same two-line heading. Desktop uses a left-to-right fade; tablet extends protection beneath the longer headline; mobile uses a top-to-bottom fade with text near the top and the coast visible below. The hero photo, title, body, primary action, and secondary action stay immediately available. White caption surfaces hold navy location and scroll text over the image.
 
-Both fonts are locally hosted variable WOFF2 files. Headings are moderately weighted, tightly tracked and balanced; body copy has open leading. The outlined serif DDTC logo is artwork, not a third interface font.
+Hero legibility is checked by sampling the rendered photo and scrim beneath text at desktop, tablet, and mobile sizes. General flat-colour contrast cannot establish contrast over photography.
 
-### Hierarchy
-- **Display:** the frontmatter display role describes the desktop photographic hero. At tablet width it is (59px); at mobile it uses `clamp(33px, 8.8vw, 54px)` with (1.18) leading.
-- **Headline:** the headline role describes base section headings. Page titles use `clamp(38px, 4.8vw, 68px)`; individual page templates apply their observed sizes rather than a fixed ratio.
-- **Title:** the title role describes experience-card headings. Base headings share (1.2) leading, with card titles using the documented (1.35).
-- **Body:** the body role is the page default. Lead paragraphs use (20px); hero supporting text uses (17px), becoming (15px) on mobile.
-- **Label:** compact metadata and navigation use the label size. Buttons use the separate button role; small buttons use (13px).
-- **Prices:** Plus Jakarta Sans with tabular numerals; card prices use (24px), mobile card prices (25px), and the package panel (39px).
+## Shared components
 
-**The Artwork Lettering Rule.** Preserve the original outlined DDTC letters; never recreate the logo by typing a substitute serif face.
+Primary booking actions use `.button-booking`, layered on the existing `.button` shape. Generic buttons remain Travel Blue; secondary buttons use a pale blue surface with blue text. All retain press feedback, visible focus, disabled semantics, and existing dimensions. Links and active navigation use blue; active navigation and filters have an underline as a non-colour cue.
 
-## Layout
+The white mobile menu retains its toggle, Escape behavior, focus restoration, inert closing state, and navigation handling. Menu shadows are reserved for this floating surface. The WhatsApp button stays blue with its existing floating silhouette.
 
-The standard content container caps at (1240px), with total horizontal subtraction of (112px). It changes to (72px) at viewport widths up to (1150px) and (40px) up to (700px). Wide photographic containers cap at (1512px) with (48px) total subtraction; at widths from (1600px) the cap is (1600px) with (80px) subtraction. Mobile wide containers subtract (24px).
+Experience cards stay unboxed and photo-led. Country captions and arrows now sit on light surfaces. No promotional badges or availability claims are added. Trip prices, dates, inclusion lists, disclaimers, package switching, and enquiry parameters are unchanged.
 
-Ordinary section padding uses the documented section spacing and switches to compact-section spacing at mobile. Template-specific gaps and padding vary with content. Experience grids use three columns with (27px) column gaps and (48px) row gaps, two columns up to (950px), and one column up to (700px). Editorial split layouts collapse to one column at mobile. The trip sidebar is sticky above mobile and moves before trip copy on mobile. Contact information similarly precedes the enquiry form on mobile.
+Package panels, notices, review surfaces, forms, services, and closing enquiries use Coastal Mist. Selected package rows use pale blue with a clear blue outline and checked radio mark. Inputs remain white with a stronger border than decorative lines. Invalid inputs use soft red plus the existing error text and `aria-invalid`. Consent and legal links use readable blue.
 
-The header is in normal document flow: (100px) tall on desktop, (84px) up to (950px), and (80px) up to (700px). The navigation logo is (230px) wide, (210px) up to (1150px), and the compact wordmark is (152px) up to (700px). The full footer mark is (250px), (220px) at intermediate widths and (230px) on mobile. Images preserve intrinsic aspect ratio with automatic height and contain fitting. These are implemented web sizes, not inferred corporate clear-space rules.
+The footer is white with navy headings and supporting body text. It uses the exact client-supplied primary PNG. Navigation uses the existing navy compact wordmark. Logo files are not recoloured or regenerated. The exact pixel/alpha identity test continues to protect the original. See `docs/LOGO-ASSETS.md` for source provenance and the raster-derived vector limitations.
 
-## Elevation & Depth
+## Reviews and motion
 
-Tonal layering provides most depth. Panels use deep surfaces without decorative borders or shadows; photography uses dark gradient scrims to hold white text. The floating WhatsApp action is the deliberate exception, using a soft shadow (`0 5px 20px rgb(0 0 0 / .25)`). Keyboard focus uses a champagne outline (3px), offset by (5px); package-option focus uses a (3px) offset.
+The homepage keeps the approved two-row review marquee, original customer excerpts, initials, five-star ratings, pause control, hover/touch pause, and offscreen suspension. Reduced motion shows every unique review in a static grid. Duplicated groups stay hidden from screen readers. Original review submissions and permission remain in `docs/REVIEW-SOURCES.md`.
 
-## Shapes
+The dedicated Reviews page uses the client-supplied 21st.dev staggered testimonial card pattern. Cards show approved excerpts, initials, names, trip context, and ratings; the selected card is blue with white copy. Manual arrows and side-card selection update the complete review below. Arrow keys and Home/End switch instantly; pointer movement uses 250ms transforms with the existing ease-out. No auto-advance is used. At small widths, a preview excerpt may be clamped while the complete text remains below. A no-JavaScript fallback provides every full review. The homepage continues to use its existing marquee.
 
-Controls have modest corners, photographs and panels have slightly broader corners, and the hero uses the broadest recurring rectangular corner. Caption chips have the smallest radius. Circular shapes are limited to icon actions and radio indicators. Field strokes use (1px); selected package options use an ocean outline. Experience cards remain unboxed, with rounding on the photograph rather than a surrounding card shell.
+The existing hero settle, editorial entrances, photograph reveals, button press feedback, and 200ms mobile-menu transition are retained. No animation dependency is introduced. Reduced-motion handling, focus-triggered reveal, and immediate functional surfaces remain intact. See `src/components/section-motion.tsx` for the existing IntersectionObserver/Web Animations implementation.
 
-## Components
+## Preservation and maintenance
 
-### Buttons
+Do not introduce invented discounts, reviews, reviewer portraits, availability, partnership claims, or completed-trip photography claims. Preserve enquiry-only behavior: no payment or confirmed reservation is made. Follow the route data and disclosure source files; keep visual edits separate from submission logic.
 
-Clear, compact enquiry actions. Primary and secondary variants use the frontmatter colors, padding and radius, with minimum height (52px); small buttons use (44px) and padding (12px 18px). Fine-pointer hover changes the background; active presses scale to (.98). Background transitions last (180ms); press transforms last (160ms) with the recorded ease-out curve. Disabled buttons reduce opacity to (.6) and show a waiting cursor. Focus inherits the global champagne outline.
-
-### Filter chips
-
-Category controls are wrapping buttons, not pills. They have minimum height (43px), muted unselected text, and a tonal selected surface with white text. Selection is exposed through `aria-pressed`. Fine-pointer hover uses the deep surface and white text. Mobile horizontal padding becomes (13px).
-
-### Cards / Containers
-
-Experience cards pair a cropped destination photograph with metadata, title, location and a tabular price below. Image ratios are (1.4), becoming (1.45) on mobile. On fine-pointer hover the image scales to (1.035) over (500ms), and the circular arrow turns blue. Story, notice and enquiry panels use tonal surfaces and the documented card radius. Padding varies by role: story preview (37px), enquiry form (35px), package panel (29px), with smaller mobile values.
-
-### Inputs / Fields
-
-Dark fields have a subtle line stroke, documented control corners, minimum height (49px), and visible labels above. Field text is (15px), increasing to (16px) on mobile. Textareas resize vertically. Invalid fields use the error stroke with adjacent error text; success feedback uses the success color. Placeholder text uses muted blue-grey. Search and sort controls use the surface background rather than the form field background.
-
-### Navigation
-
-Desktop links use muted text, white for the current page, and champagne on fine-pointer hover. Up to (950px), links and the header CTA give way to a (44px) menu button. The menu opens in normal flow, exposes `aria-expanded`, and closes on selection or Escape; Escape returns focus to the toggle.
-
-### Official identity artwork
-
-The untouched primary PNG is the fidelity master for the supplied logo. Desktop navigation uses the horizontal SVG, mobile navigation uses the compact traced wordmark, and the footer uses the full white/gold SVG. Full variants retain the company name and motto; navigation variants omit those fine lines for readability. The favicon is extracted from the actual emblem.
-
-The SVG family derives from source contours; its production inks flatten original gradients. Fine palm fronds, anti-aliased edges and cursive joins are approximations. Preserve the exact primary PNG and see [Logo assets](docs/LOGO-ASSETS.md) for file inventory, production method and professional artwork-review limits. Web integration review does not establish these derivatives as print, signage, embroidery or trademark masters.
-
-### Package selector
-
-A tonal sticky panel contains labelled package choices, price, deposit information and an enquiry action. Selected choices use brand navy, an ocean outline and a blue circular indicator. Choice changes update the displayed package price and enquiry context. On mobile, the panel is static and appears above trip details.
-
-### Customer reviews
-
-Five approved customer reviews use text-only tonal panels with the supplied name, trip context, five champagne stars and full review text. The two-column desktop grid becomes one column on mobile, with stars below the name. Review text stays at (16px), with paragraphs capped at (72ch); no customer portraits or destination claims are inferred. The homepage uses the client-supplied two-row marquee pattern, adapted to actual DDTC excerpts, initials and champagne stars. Rows move in opposite directions over 36s and 40s with a soft edge mask. A pause/resume button, fine-pointer hover pause, touch pause and offscreen suspension keep reading under the visitor's control. Reduced motion displays every unique review in a static grid. Repeated groups are decorative and hidden from screen readers. Star ratings have a single accessible “5 out of 5 stars” label. Original submissions, permission and editorial notes are recorded in docs/REVIEW-SOURCES.md.
-
-Motion adds a quiet arrival to the photographic design: hero copy enters over 550–650ms with 70ms spacing, page introductions over 400ms, and editorial sections reveal once over 550ms with up to 150ms of sibling stagger. Photographs use a restrained 650ms mask/fade reveal; the hero retains its 1.2s image settle. A lightweight IntersectionObserver and Web Animations API handle editorial reveals without a motion dependency or per-frame React updates. Server content is visible by default; forms, package prices and catalogue results are immediate. Keyboard focus reveals any pending content instantly. The mobile menu fades/slides in and out over 200ms, closes instantly for Escape/navigation, and stays inert while exiting. Hover arrow movement runs only for fine pointers. Reduced-motion preferences remove entrances, menu movement and smooth scrolling, including when the preference changes during a visit.
-
-## Do's and Don'ts
-
-### Do:
-- **Do** preserve the official source artwork and its original serif DDTC contours.
-- **Do** use the horizontal, compact and full white/gold variants in their existing navigation and footer contexts.
-- **Do** maintain intrinsic logo aspect ratios and the implemented responsive header dimensions.
-- **Do** preserve white and ivory text, muted supporting copy, blue actions and champagne focus on the dark canvas.
-- **Do** keep keyboard focus visible and honor reduced-motion preferences.
-
-### Don't:
-- **Don't** replace the supplied DDTC artwork with generic travel symbols or typed lettering.
-- **Don't** turn the raster-derived SVG family into an unqualified claim of original vector-master fidelity.
-- **Don't** infer new corporate proportions, clear-space requirements or print approval from these web adaptations.
-- **Don't** replace the approved navy palette or locally hosted font pairing during routine extensions.
+Impeccable colour hierarchy and accessibility guidance, Taste's existing-project preservation and screenshot review, and Emil's interaction restraint informed this refinement. The pinned client brief overrides generic detector advice to delete approved quote emoji, replace review cards, add footage, or increase animation. See `docs/LIGHT-THEME-TODO.md` for progress and `docs/LIGHT-THEME-IMPLEMENTATION.md` for verification evidence and remaining limits.

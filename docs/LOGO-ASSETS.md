@@ -34,7 +34,7 @@ The full company name and motto remain in the full variants. They are intentiona
 
 These are **raster-derived web vectors**, not the original Illustrator/EPS master or a claim of pixel-identical manual reconstruction. Small colour regions, anti-aliased edges, fine palm fronds and cursive joins are approximated by the trace. The original gradients are flattened in the SVG family. A professional designer should review and clean the contours and approve the derivative lockups before print, signage, embroidery or trademark-master use. No unseen brand-guideline proportions are claimed.
 
-For the most exact full-logo reproduction, use the untouched primary PNG on a light background at or below its supplied resolution. The website uses scalable vector variants to keep the navigation crisp.
+For the most exact full-logo reproduction, use the untouched primary PNG on a light background at or below its supplied resolution. Following the light-theme refinement of 6 November 2026, the website footer uses that exact primary PNG and navigation uses the existing compact navy wordmark SVG. The white/gold variants remain available for dark-surface reproduction. No artwork files or logo colours were altered for the theme change.
 
 ## Reproduction and maintenance
 
