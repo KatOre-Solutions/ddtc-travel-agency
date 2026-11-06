@@ -25,7 +25,7 @@ export type TripPackage = z.infer<typeof packageSchema>;
 const poster = (time: string) => `WhatsApp Image 2026-10-27 at ${time}.jpeg`;
 const generalVerification = [
   'Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.',
-  'The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.',
+  'Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.',
 ];
 const crossBorder = ['Confirm passport, entry permission and any applicable travel requirements with DDTC before booking.'];
 const base = {
@@ -36,7 +36,7 @@ const road = (price: number, deposit: number | null, inclusions: string[] = []):
   id: 'road', name: 'Road package', transport: 'Road', price, deposit, departure: null, inclusions,
 });
 const lesothoInclusions = ['Return transport to Lesotho', 'Daily breakfast', 'Local driving in Lesotho', 'Day visit to Golden Gate Highlands National Park', 'Half-day visit to Clarens', 'Afriski Mountain Resort visit', 'DDTC T-shirt'];
-const lesothoVerification = ['Accommodation is not listed among the package inclusions. Confirm the property, number of nights and whether the room cost is included.', 'Confirm entry fees, skiing or equipment costs, meals beyond breakfast and exclusions.', ...generalVerification];
+const lesothoVerification = ['The combined poster specifies 4 days / 3 nights but does not list accommodation among the inclusions. Supply the property and room basis, and clarify whether accommodation is included.', 'Visits and daily breakfast are listed. Clarify whether attraction admission, skiing or equipment hire and other meals are included or extra.', ...generalVerification];
 
 export const experiences: Experience[] = z.array(experienceSchema).parse([
   {
@@ -50,7 +50,7 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     ],
     inclusions: ['Accommodation', 'Daily breakfast'], exclusions: ['All activity costs'],
     activities: ['Robben Island', 'Cape Town boat cruise', 'Cape Point', 'Cape Town beaches and natural attractions'],
-    verification: ['Confirm the hotel, room basis, flight origin and whether road travel adds nights beyond the advertised stay.', 'Road departure is 9 December, while the advertised stay starts on 10 December. Confirm the travel schedule.', 'The poster explicitly states that the R2,687 deposit applies to both packages; obtain current written confirmation before payment.', ...generalVerification],
+    verification: ['Supply the hotel, room basis and flight origin; these are not named in the poster.', 'The road departure is 9 December and the advertised 4-day / 3-night stay is 10–13 December. Clarify the road travel schedule and any additional overnight arrangements.', ...generalVerification],
     sources: [poster('19.11.04')], seo: { title: 'Cape Town Holiday · December 2027', description: 'Explore DDTC’s advertised Cape Town road and flight packages for 10–13 December 2027 and enquire about the details.' },
   },
   {
@@ -70,9 +70,9 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     description: 'A Chobe river cruise, a safari game drive and the spectacle of Victoria Falls, brought together in one cross-border journey.',
     start: '2027-05-06', end: '2027-05-09', days: 4, nights: 3, accommodation: 'Kwalape (as advertised)',
     image: 'victoria-falls.jpg', imageAlt: 'The broad cascade of Victoria Falls', packages: [road(11300, 4800)],
-    inclusions: ['Road transport (H1 minibus)', 'Three nights at Kwalape', 'Daily breakfast as per quotation', 'Guided visit to Victoria Falls', 'Safari game drive', 'Chobe River boat cruise', 'Park fees and local transfers', 'Time to explore local markets and attractions'],
+    inclusions: ['Road transport (H1 minibus)', 'Three nights at Kwalape', 'Daily breakfast as per quotation', 'Guided visit to Victoria Falls', 'Chobe National Park game drive', 'Chobe River boat cruise', 'Park fees and local transfers', 'Time to explore local markets and attractions'],
     activities: ['Victoria Falls guided visit', 'Chobe National Park game drive', 'Chobe River boat cruise', 'Local markets'], requirements: crossBorder,
-    verification: ['Confirm the Victoria Falls border crossing and entry fees for each traveller’s nationality.', 'Confirm the precise safari route and inclusions. Wildlife sightings, including the Big Five, cannot be guaranteed.', 'Exclusions are not specified; confirm lunches, dinners and personal expenses.', ...generalVerification],
+    verification: ['Park fees and local transfers are explicitly included. Clarify the Victoria Falls border route and whether visa or border charges are also included.', 'The poster includes a Chobe National Park game drive, Chobe River cruise and guided Victoria Falls visit. Supply their schedule; wildlife sightings are not guaranteed.', 'Exclusions are not specified; clarify lunches, dinners and personal expenses.', ...generalVerification],
     sources: [poster('19.11.06 (1)')], seo: { title: 'Botswana & Victoria Falls · May 2027', description: 'Enquire about DDTC’s 6–9 May 2027 Botswana and Victoria Falls journey with advertised safari and boat-cruise inclusions.' },
   },
   ...(['winter', 'mountain'] as const).map((season) => ({
@@ -99,8 +99,29 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
       { label: '26 December', description: 'Breakfast, check-out and return journey.' },
     ],
     paymentPlan: ['Standard: 11 payments of R720 and a final payment of R680. Total R8,600.', 'Extended: R615 per month over 14 months. Total R8,610.', 'Flexible: R575 per month over 15 months. Total R8,625.'],
-    verification: ['Payment-plan totals differ: R8,600, R8,610 and R8,625. Confirm which plan and total apply.', 'No separate deposit is specified. Confirm deposit, payment dates, room basis, meals and exclusions.', 'Breakfast appears in the final-day itinerary, but daily breakfast is not explicitly listed as an inclusion.', 'The poster shows a hotel star rating; this has not been adopted without verification.', ...generalVerification],
+    verification: ['The three plans have separately advertised totals of R8,600, R8,610 and R8,625. Supply their payment start dates and clarify whether any separate deposit is required.', 'The Edward Hotel and 3 nights are specified; supply the room-sharing basis and exclusions.', 'Breakfast appears in the final-day itinerary, but daily breakfast is not explicitly listed as an inclusion. Clarify meals on the other days.', ...generalVerification],
     sources: [poster('19.11.03')], seo: { title: 'Durban Christmas Escape · December 2027', description: 'Enquire about DDTC’s 23–26 December 2027 Durban holiday, with The Edward Hotel, uShaka entry and a harbour cruise as advertised.' },
+  },
+  {
+    ...base, id: 'durban-may-2027', title: 'Durban Beach Escape', destination: 'Durban', country: 'South Africa', category: 'Beach holidays',
+    description: 'Enjoy Durban’s coastline with accommodation at Garden Court South Beach, breakfast, a boat cruise and uShaka Marine World entry in the advertised package.',
+    start: '2027-05-14', end: '2027-05-18', durationNote: '14–18 May; number of accommodation nights and travel schedule to confirm', accommodation: 'Garden Court South Beach Durban', groupSize: 8,
+    image: 'durban-beachfront.jpg', imageAlt: 'The beachfront and ocean in Durban', packages: [{ ...road(7068, 3570), name: 'Durban package' }],
+    inclusions: ['Accommodation at Garden Court South Beach Durban', 'Breakfast', 'Boat cruise', 'uShaka Marine World entry', 'Local driving around Durban for activities'],
+    exclusions: ['Wine tasting at High Gate Estate (as printed)', 'Mandela Capture Site visit', 'Pavilion Mall shopping', 'Durban nightlife activities'],
+    activities: ['Durban beachfront', 'Boat cruise', 'uShaka Marine World', 'High Gate Estate wine tasting (optional, own cost)', 'Mandela Capture Site (optional, own cost)', 'Pavilion Mall shopping (own cost)', 'Durban nightlife (optional, own cost)'],
+    verification: ['Garden Court South Beach Durban and breakfast are specified; supply the number of accommodation nights and room-sharing basis.', 'The poster includes local driving around Durban but does not explicitly include transport to or from Durban. Clarify intercity transport, pickup points and any extra cost.', 'A boat cruise and uShaka Marine World entry are included. Supply the cruise operator and the specific uShaka ticket or attraction access.', 'Wine tasting, Mandela Capture Site, Pavilion Mall shopping and nightlife are explicitly at own cost. Clarify the identity/location of High Gate Estate as printed and optional activity arrangements.', ...generalVerification],
+    sources: ['WhatsApp Image 2026-11-02 at 20.47.04.jpeg'], seo: { title: 'Durban Beach Escape · May 2027', description: 'Ask DDTC about the 14–18 May 2027 Durban package, advertised at R7,068 per person with Garden Court South Beach accommodation.' },
+  },
+  {
+    ...base, id: 'durban-valentines-february-2027', title: 'Durban Valentine’s Escape', destination: 'Durban', country: 'South Africa', category: 'Beach holidays',
+    description: 'Celebrate Valentine’s in Durban with an advertised stay at ONOMO Hotel North Beach, daily breakfast, a romantic dinner and a boat cruise.',
+    start: '2027-02-11', end: '2027-02-14', durationNote: '11–14 February; number of accommodation nights and travel schedule to confirm', accommodation: 'ONOMO Hotel North Beach (as advertised)',
+    image: 'durban-beachfront.jpg', imageAlt: 'The beachfront and ocean in Durban', packages: [road(5860, 2430)],
+    inclusions: ['Accommodation at ONOMO Hotel North Beach', 'Daily breakfast', 'Transport to Durban', 'Romantic dinner (printed as “Romantic Galler Dinner”; details to confirm)', 'Boat cruise'],
+    activities: ['Romantic dinner', 'Boat cruise', 'Durban beachfront'],
+    verification: ['ONOMO Hotel North Beach is named and the price is per person. Supply the room-sharing basis and number of accommodation nights.', 'Transport to Durban is included. Supply the departure point, pickup times and schedule, and clarify whether return transport is also included.', 'A romantic dinner is included; clarify the printed “Romantic Galler Dinner” wording and dinner arrangements.', 'A boat cruise is included; supply the operator, schedule and any package exclusions.', ...generalVerification],
+    sources: ['WhatsApp Image 2026-11-02 at 20.47.05.jpeg'], seo: { title: 'Durban Valentine’s Escape · February 2027', description: 'Enquire about DDTC’s 11–14 February 2027 Durban Valentine’s trip, advertised at R5,860 per person with a R2,430 deposit.' },
   },
   {
     ...base, id: 'mozambique-september-2027', title: 'Mozambique Coastal Escape', destination: 'Mozambique', country: 'Mozambique', category: 'Beach holidays',
@@ -109,7 +130,7 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     image: 'mozambique-coast.jpg', imageAlt: 'Coastal scenery in Mozambique', packages: [road(7500, 2500)],
     inclusions: ['Road transport to Mozambique', 'Accommodation at Hotel Kapital', 'Local driving for activities', 'Daily breakfast'],
     activities: ['Bazaruto Archipelago (featured destination)', 'Tofo Beach (featured destination)', 'Marine life experiences (featured)', 'Maputo City (featured destination)'], requirements: crossBorder,
-    verification: ['Maputo, Tofo and Bazaruto are shown as attractions, but no itinerary or admission inclusions are supplied. Confirm which are actually visited.', 'Confirm the hotel identity, overnight dates and duration; do not infer them solely from the date range.', 'Confirm activity costs and exclusions.', ...generalVerification],
+    verification: ['Maputo, Tofo and Bazaruto are shown as attractions, but no itinerary or admission inclusions are supplied. Clarify which are actually visited.', 'Hotel Kapital is named. Supply its location, room basis and number of nights; these are not stated in the poster.', 'Local driving is included; clarify activity/admission costs, exclusions and whether return transport is included.', ...generalVerification],
     sources: [poster('19.11.05 (1)')], seo: { title: 'Mozambique Coastal Escape · September 2027', description: 'See DDTC’s advertised Mozambique package for 16–19 September 2027 and ask for the confirmed route and accommodation details.' },
   },
   {
@@ -120,7 +141,7 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     packages: [{ id: 'flights', name: 'Return flights package', transport: 'Return flights', price: 31150, deposit: 4000, departure: null, inclusions: ['Return flights with one stop connecting in Singapore'] }],
     inclusions: ['Day visit to Singapore', 'Accommodation in three locations: Ubud, Seminyak and Uluwatu', 'Breakfast at all advertised accommodation', 'Transfers (as advertised)', 'Visa fee (printed as “Ivisa fee”; verify)'],
     activities: ['Singapore day visit', 'Ubud', 'Seminyak', 'Uluwatu'], requirements: crossBorder,
-    verification: ['Confirm flight origin, schedules, baggage allowance, overnight count and which transfers are included.', 'Confirm accommodation identities and spelling; poster imagery is not proof of the properties.', 'The printed “Ivisa fee” wording is unclear. Confirm the visa service, fee, eligibility and country covered.', 'Confirm exclusions, optional activities and entry requirements for both countries.', ...generalVerification],
+    verification: ['Return flights via Singapore and transfers are listed. Supply the flight origin, schedule, baggage allowance and the specific transfer routes covered.', 'Karunia House Lodge, Kaia Raya Surf Lodge and Umi Resort are named. Supply the nights at each property and room-sharing basis.', 'The printed “Ivisa fee” wording is unclear. Clarify the visa service, fee, eligibility and country covered.', 'Supply exclusions and optional activity costs; clarify arrangements for the advertised Singapore day visit.', ...generalVerification],
     sources: [poster('19.11.05')], seo: { title: 'Bali & Singapore · August 2027', description: 'Explore DDTC’s advertised Bali and Singapore journey for 3–13 August 2027, from R31,150 per person subject to confirmation.' },
   },
   {
@@ -140,7 +161,7 @@ export const experiences: Experience[] = z.array(experienceSchema).parse([
     image: 'blyde-river-canyon.jpg', imageAlt: 'The Three Rondavels above the Blyde River Canyon', packages: [road(4600, 1800)],
     inclusions: ['Three nights’ accommodation', 'Transport', 'Daily breakfast', 'Local driving for activities', 'Visits to Three Rondavels, Sudwala Caves, Echo Caves, Lone Creek Falls and Potholes'],
     exclusions: ['All other activities are at the traveller’s own cost'], activities: ['Three Rondavels', 'Sudwala Caves', 'Echo Caves', 'Lone Creek Falls', 'Potholes (exact site to confirm)'], paymentDeadline: '2026-12-15',
-    verification: ['Confirm the accommodation property, transport origin and return arrangement, attraction entry fees and the identity of “Potholes”.', 'The poster lists a final-payment deadline of 15 December 2026; reconfirm before payment.', ...generalVerification],
+    verification: ['Three nights, daily breakfast, transport and the listed attraction visits are included. Supply the accommodation property, room basis, transport origin and return arrangement.', 'Clarify whether admission fees for the listed visits are covered, and which site the printed “Potholes” refers to.', ...generalVerification],
     sources: [poster('19.11.06')], seo: { title: 'Mpumalanga Summer Getaway · December 2026', description: 'Discover DDTC’s 18–21 December 2026 Mpumalanga trip, advertised at R4,600 per person with three nights’ accommodation.' },
   },
 ]);

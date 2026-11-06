@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:3000. The development preview includes clearly marked review summaries awaiting consent. Production builds exclude all unapproved review content.
+Open http://127.0.0.1:3000. Five named customer reviews with confirmed five-star ratings and publication permission appear on the reviews page, with an excerpt on the homepage.
 
 ```powershell
 npm run typecheck
@@ -26,12 +26,12 @@ Browser tests expect the local server on port 3000 and installed Microsoft Edge.
 
 ## Pages and structure
 
-- `src/app`: homepage, about, services, catalogue, ten trip pages, reviews, contact, privacy, booking information, photo credits, error/404 pages, robots and sitemap.
+- `src/app`: homepage, about, services, catalogue, twelve trip pages, reviews, contact, privacy, booking information, photo credits, error/404 pages, robots and sitemap.
 - `src/lib/experiences.ts`: typed trip records and runtime validation. Each trip’s source posters and verification questions remain attached to its record.
 - `src/components`: shared navigation, footer, photo, experience card, filters, package selector and enquiry form.
 - `src/app/globals.css`: approved DDTC tokens and responsive composition.
 - `events/`: immutable original content references. They are not served as production graphics.
-- `docs/POSTER-EXTRACTION.md`: the full extraction from all ten posters.
+- `docs/POSTER-EXTRACTION.md`: the full extraction from all twelve source posters.
 - `docs/CLIENT-CONFIRMATIONS.md`: remaining content and publication questions.
 - `ASSET-ATTRIBUTIONS.md` and `/photo-credits`: sources, authors and licenses for real destination imagery.
 
@@ -57,7 +57,7 @@ The client-selected official logo is preserved in `brand-source/DDTC-primary-cli
 
 ## Approve a testimonial
 
-Current review text consists of edited source summaries, with no invented names, portraits, ratings or direct quotations. They appear only in development. Before publication, obtain the original wording, verified attribution and consent; replace summaries with approved content and deliberately update the production rendering condition in both `src/app/page.tsx` and `src/app/reviews/page.tsx`. Keep draft reviews noindexed until approved. Do not change the production guard simply to make the section look populated.
+Edit `src/lib/reviews.ts`. The five current reviews, names, publication permission and five-star ratings were confirmed by the client through the site owner on 6 November 2026. Original submissions and editing notes are preserved in `docs/REVIEW-SOURCES.md`. Keep each reviewer's meaning and voice; do not add unsupported claims, portraits, surnames, destinations or ratings. Leave new entries unapproved until permission is confirmed, and use a null rating unless the rating is confirmed. Both the reviews page and homepage use only approved records. The reviews page is eligible for indexing when the site-wide launch switch is enabled.
 
 ## Enquiry delivery
 
@@ -71,7 +71,7 @@ For a public/serverless deployment, add a shared rate limiter and provider abuse
 
 The project is compatible with Vercel’s Next.js build. Use `npm run build` and configure the email variables in the hosting provider. Set `NEXT_PUBLIC_SITE_URL` only after the final domain is confirmed. Then review `ALLOW_INDEXING`; it defaults to false. Do not publish draft terms or unapproved customer stories. Request approval before production deployment.
 
-The sitemap contains no invented domain. Draft legal and review pages have noindex metadata, and robots blocks indexing by default. The public business schema contains only supplied contact facts, with no aggregate ratings or partnership claims.
+The sitemap contains no invented domain. Draft legal pages have noindex metadata, and robots blocks indexing by default. The public business schema contains only supplied contact facts, with no aggregate ratings or partnership claims.
 
 ## Reference documentation
 

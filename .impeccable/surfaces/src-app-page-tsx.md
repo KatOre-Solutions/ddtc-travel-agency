@@ -13,7 +13,7 @@ THESIS: On this page DDTC's real calendar of small-group journeys becomes an inv
 
 OWN-WORLD: Midnight navy, white sans-serif typography, quiet champagne detail and a single saturated blue action. Panoramic coast hero, unboxed photographic experience cards, broad margins, restrained corners. Plus Jakarta Sans and DM Sans are pinned by the client.
 
-STORY: Understand DDTC's accessible planned holidays, explore actual trips, learn who plans them, then enquire with a package preference. Review summaries stay explicitly pending approval in local preview.
+STORY: Understand DDTC's accessible planned holidays, explore actual trips, learn who plans them, then enquire with a package preference. Five named customer reviews and their five-star ratings are approved for publication. The homepage displays an attributed excerpt linked to the full reviews page.
 
 FIRST VIEWPORT: Compact horizontal DDTC wordmark and navigation above a broad coastal photograph. Large left-aligned two-line white title overlays its dark left edge; short supporting sentence and blue Plan Your Trip button remain immediately visible. A quiet Cape Town location caption anchors the opposite lower corner. Below it, a heading and three destination photographs introduce the catalogue. The working package selector is the signature interaction, changing the enquiry context and displaying the real advertised price.
 

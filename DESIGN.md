@@ -216,6 +216,10 @@ The SVG family derives from source contours; its production inks flatten origina
 
 A tonal sticky panel contains labelled package choices, price, deposit information and an enquiry action. Selected choices use brand navy, an ocean outline and a blue circular indicator. Choice changes update the displayed package price and enquiry context. On mobile, the panel is static and appears above trip details.
 
+### Customer reviews
+
+Five approved customer reviews use text-only tonal panels with the supplied name, trip context, five champagne stars and full review text. The two-column desktop grid becomes one column on mobile, with stars below the name. Review text stays at (16px), with paragraphs capped at (72ch); no customer portraits or destination claims are inferred. The homepage features a shared review excerpt in a semantic figure with an attributed caption. Star ratings have a single accessible “5 out of 5 stars” label. Original submissions, permission and editorial notes are recorded in docs/REVIEW-SOURCES.md.
+
 Motion is limited to the existing hero settle (1.2s), image hover, small button press and action hover. Hover effects run only for fine pointers. Reduced-motion preferences disable transitions and animations and restore immediate scroll behavior.
 
 ## Do's and Don'ts

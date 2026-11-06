@@ -13,15 +13,15 @@ test('home, navigation and all images load with no horizontal overflow', async (
 });
 test('catalogue category, search and empty state work', async ({ page }) => {
   await page.goto('/experiences');
-  await expect(page.locator('.experience-card')).toHaveCount(10);
+  await expect(page.locator('.experience-card')).toHaveCount(12);
   await page.getByRole('button', { name: 'Beach holidays', exact: true }).click();
-  await expect(page.locator('.experience-card')).toHaveCount(3);
+  await expect(page.locator('.experience-card')).toHaveCount(5);
   await page.getByRole('textbox', { name: 'Search experiences' }).fill('Durban');
-  await expect(page.locator('.experience-card')).toHaveCount(1);
+  await expect(page.locator('.experience-card')).toHaveCount(3);
   await page.getByRole('textbox', { name: 'Search experiences' }).fill('No such journey');
   await expect(page.getByText('No journeys found just yet.')).toBeVisible();
   await page.getByRole('button', { name: 'Clear filters' }).click();
-  await expect(page.locator('.experience-card')).toHaveCount(10);
+  await expect(page.locator('.experience-card')).toHaveCount(12);
 });
 test('package selection changes price and persists into enquiry', async ({ page }) => {
   await page.goto('/experiences/cape-town-december-2027');
@@ -32,6 +32,28 @@ test('package selection changes price and persists into enquiry', async ({ page 
   await expect(page.getByRole('textbox', { name: 'Preferred destination' })).toHaveValue('Cape Town');
   await expect(page.getByRole('textbox', { name: 'Travel dates' })).toHaveValue('10–13 Dec 2027');
   await expect(page.getByRole('textbox', { name: 'Preferred package' })).toHaveValue('Cape Town Holiday · Return flights package');
+});
+
+test('new Durban departures appear in search and carry their own dates and package into enquiries', async ({ page }) => {
+  for (const trip of [
+    { id: 'durban-may-2027', title: 'Durban Beach Escape', dates: '14–18 May 2027', price: 'R7 068', deposit: 'R3 570', hotel: 'Garden Court South Beach Durban', package: 'Durban package' },
+    { id: 'durban-valentines-february-2027', title: 'Durban Valentine’s Escape', dates: '11–14 Feb 2027', price: 'R5 860', deposit: 'R2 430', hotel: 'ONOMO Hotel North Beach', package: 'Road package' },
+  ]) {
+    await page.goto('/experiences');
+    await page.getByRole('textbox', { name: 'Search experiences' }).fill(trip.title);
+    await expect(page.locator('.experience-card')).toHaveCount(1);
+    await page.locator('.experience-card').getByRole('link').first().click();
+    await expect(page).toHaveURL(new RegExp(`/experiences/${trip.id}$`));
+    await expect(page.getByRole('heading', { level: 1 })).toHaveText(trip.title);
+    await expect(page.locator('.selected-price')).toContainText(trip.price);
+    await expect(page.locator('.selected-price')).toContainText(trip.deposit);
+    await expect(page.locator('.trip-copy')).toContainText(trip.hotel);
+    await expect(page.locator('.trip-facts')).toContainText(trip.dates);
+    await page.getByRole('link', { name: 'Enquire About This Trip' }).click();
+    await expect(page.getByRole('textbox', { name: 'Preferred destination' })).toHaveValue('Durban');
+    await expect(page.getByRole('textbox', { name: 'Travel dates' })).toHaveValue(trip.dates);
+    await expect(page.getByRole('textbox', { name: 'Preferred package' })).toHaveValue(`${trip.title} · ${trip.package}`);
+  }
 });
 test('enquiry validates and prepares a complete WhatsApp message without claiming delivery', async ({ page }) => {
   await page.goto('/contact');

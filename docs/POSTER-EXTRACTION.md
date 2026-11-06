@@ -1,6 +1,6 @@
 # Client poster extraction
 
-All ten images in events/ were inspected visually on 2 November 2026. Ten distinct trip records are represented. The standalone June Lesotho poster repeats the June journey in the combined June/August poster; it is mapped to the same record. Dates and prices are source claims, not confirmations of availability. No poster layout or graphic is reused. Original files are preserved and SHA-256 checked by the tests.
+Twelve source images in events/ represent twelve distinct trip records. The original ten images were inspected visually on 2 November 2026; two additional Durban departures were added from client posters on 6 November 2026. Of the four posters supplied for the follow-up, WhatsApp Image 2026-11-02 at 20.47.04 (1).jpeg (Mozambique) and WhatsApp Image 2026-11-02 at 20.47.05 (1).jpeg (Durban Christmas) have identical SHA-256 hashes to the existing October source files and do not represent additional departures. The standalone June Lesotho poster repeats the June journey in the combined June/August poster; it is mapped to the same record. Dates and prices are source claims, not confirmations of availability. No poster layout or graphic is reused. Original files are preserved and SHA-256 checked by the tests.
 
 Structured source: src/lib/experiences.ts, validated with Zod. Missing fields remain null or explicit verification notes.
 
@@ -54,11 +54,10 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Confirm the hotel, room basis, flight origin and whether road travel adds nights beyond the advertised stay.
-- Road departure is 9 December, while the advertised stay starts on 10 December. Confirm the travel schedule.
-- The poster explicitly states that the R2,687 deposit applies to both packages; obtain current written confirmation before payment.
+- Supply the hotel, room basis and flight origin; these are not named in the poster.
+- The road departure is 9 December and the advertised 4-day / 3-night stay is 10–13 December. Clarify the road travel schedule and any additional overnight arrangements.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -123,7 +122,7 @@ Final payment deadline: Not supplied.
 - Confirm the payment-plan start date and whether the full 12-month plan remains possible.
 - Confirm meals, attraction admission fees and whether Three Rondavels is included or suggested only.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -154,7 +153,7 @@ Advertised group size: Not specified.
 - Three nights at Kwalape
 - Daily breakfast as per quotation
 - Guided visit to Victoria Falls
-- Safari game drive
+- Chobe National Park game drive
 - Chobe River boat cruise
 - Park fees and local transfers
 - Time to explore local markets and attractions
@@ -182,11 +181,11 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Confirm the Victoria Falls border crossing and entry fees for each traveller’s nationality.
-- Confirm the precise safari route and inclusions. Wildlife sightings, including the Big Five, cannot be guaranteed.
-- Exclusions are not specified; confirm lunches, dinners and personal expenses.
+- Park fees and local transfers are explicitly included. Clarify the Victoria Falls border route and whether visa or border charges are also included.
+- The poster includes a Chobe National Park game drive, Chobe River cruise and guided Victoria Falls visit. Supply their schedule; wildlife sightings are not guaranteed.
+- Exclusions are not specified; clarify lunches, dinners and personal expenses.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -245,10 +244,10 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Accommodation is not listed among the package inclusions. Confirm the property, number of nights and whether the room cost is included.
-- Confirm entry fees, skiing or equipment costs, meals beyond breakfast and exclusions.
+- The combined poster specifies 4 days / 3 nights but does not list accommodation among the inclusions. Supply the property and room basis, and clarify whether accommodation is included.
+- Visits and daily breakfast are listed. Clarify whether attraction admission, skiing or equipment hire and other meals are included or extra.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -306,10 +305,10 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Accommodation is not listed among the package inclusions. Confirm the property, number of nights and whether the room cost is included.
-- Confirm entry fees, skiing or equipment costs, meals beyond breakfast and exclusions.
+- The combined poster specifies 4 days / 3 nights but does not list accommodation among the inclusions. Supply the property and room basis, and clarify whether accommodation is included.
+- Visits and daily breakfast are listed. Clarify whether attraction admission, skiing or equipment hire and other meals are included or extra.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -371,12 +370,138 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Payment-plan totals differ: R8,600, R8,610 and R8,625. Confirm which plan and total apply.
-- No separate deposit is specified. Confirm deposit, payment dates, room basis, meals and exclusions.
-- Breakfast appears in the final-day itinerary, but daily breakfast is not explicitly listed as an inclusion.
-- The poster shows a hotel star rating; this has not been adopted without verification.
+- The three plans have separately advertised totals of R8,600, R8,610 and R8,625. Supply their payment start dates and clarify whether any separate deposit is required.
+- The Edward Hotel and 3 nights are specified; supply the room-sharing basis and exclusions.
+- Breakfast appears in the final-day itinerary, but daily breakfast is not explicitly listed as an inclusion. Clarify meals on the other days.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
+
+---
+
+## Durban Beach Escape
+
+ID: `durban-may-2027`
+
+Source posters:
+- WhatsApp Image 2026-11-02 at 20.47.04.jpeg
+
+Destination: Durban, South Africa
+
+Dates: 14–18 May 2027
+
+Duration: Schedule to confirm — 14–18 May; number of accommodation nights and travel schedule to confirm
+
+Accommodation: Garden Court South Beach Durban
+
+Advertised group size: 8
+
+### Transport and price options
+
+- Durban package: R7 068; deposit R3 570.
+
+### Inclusions
+
+- Accommodation at Garden Court South Beach Durban
+- Breakfast
+- Boat cruise
+- uShaka Marine World entry
+- Local driving around Durban for activities
+
+### Exclusions
+
+- Wine tasting at High Gate Estate (as printed)
+- Mandela Capture Site visit
+- Pavilion Mall shopping
+- Durban nightlife activities
+
+### Advertised attractions / activities
+
+- Durban beachfront
+- Boat cruise
+- uShaka Marine World
+- High Gate Estate wine tasting (optional, own cost)
+- Mandela Capture Site (optional, own cost)
+- Pavilion Mall shopping (own cost)
+- Durban nightlife (optional, own cost)
+
+### Itinerary
+
+Not supplied; confirmation required.
+
+### Payment plan
+
+Not supplied; confirmation required.
+
+Final payment deadline: Not supplied.
+
+### Client confirmation
+
+- Garden Court South Beach Durban and breakfast are specified; supply the number of accommodation nights and room-sharing basis.
+- The poster includes local driving around Durban but does not explicitly include transport to or from Durban. Clarify intercity transport, pickup points and any extra cost.
+- A boat cruise and uShaka Marine World entry are included. Supply the cruise operator and the specific uShaka ticket or attraction access.
+- Wine tasting, Mandela Capture Site, Pavilion Mall shopping and nightlife are explicitly at own cost. Clarify the identity/location of High Gate Estate as printed and optional activity arrangements.
+- Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
+
+---
+
+## Durban Valentine’s Escape
+
+ID: `durban-valentines-february-2027`
+
+Source posters:
+- WhatsApp Image 2026-11-02 at 20.47.05.jpeg
+
+Destination: Durban, South Africa
+
+Dates: 11–14 Feb 2027
+
+Duration: Schedule to confirm — 11–14 February; number of accommodation nights and travel schedule to confirm
+
+Accommodation: ONOMO Hotel North Beach (as advertised)
+
+Advertised group size: Not specified.
+
+### Transport and price options
+
+- Road package: R5 860; deposit R2 430.
+
+### Inclusions
+
+- Accommodation at ONOMO Hotel North Beach
+- Daily breakfast
+- Transport to Durban
+- Romantic dinner (printed as “Romantic Galler Dinner”; details to confirm)
+- Boat cruise
+
+### Exclusions
+
+Not supplied; confirmation required.
+
+### Advertised attractions / activities
+
+- Romantic dinner
+- Boat cruise
+- Durban beachfront
+
+### Itinerary
+
+Not supplied; confirmation required.
+
+### Payment plan
+
+Not supplied; confirmation required.
+
+Final payment deadline: Not supplied.
+
+### Client confirmation
+
+- ONOMO Hotel North Beach is named and the price is per person. Supply the room-sharing basis and number of accommodation nights.
+- Transport to Durban is included. Supply the departure point, pickup times and schedule, and clarify whether return transport is also included.
+- A romantic dinner is included; clarify the printed “Romantic Galler Dinner” wording and dinner arrangements.
+- A boat cruise is included; supply the operator, schedule and any package exclusions.
+- Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -431,11 +556,11 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Maputo, Tofo and Bazaruto are shown as attractions, but no itinerary or admission inclusions are supplied. Confirm which are actually visited.
-- Confirm the hotel identity, overnight dates and duration; do not infer them solely from the date range.
-- Confirm activity costs and exclusions.
+- Maputo, Tofo and Bazaruto are shown as attractions, but no itinerary or admission inclusions are supplied. Clarify which are actually visited.
+- Hotel Kapital is named. Supply its location, room basis and number of nights; these are not stated in the poster.
+- Local driving is included; clarify activity/admission costs, exclusions and whether return transport is included.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -491,12 +616,12 @@ Final payment deadline: Not supplied.
 
 ### Client confirmation
 
-- Confirm flight origin, schedules, baggage allowance, overnight count and which transfers are included.
-- Confirm accommodation identities and spelling; poster imagery is not proof of the properties.
-- The printed “Ivisa fee” wording is unclear. Confirm the visa service, fee, eligibility and country covered.
-- Confirm exclusions, optional activities and entry requirements for both countries.
+- Return flights via Singapore and transfers are listed. Supply the flight origin, schedule, baggage allowance and the specific transfer routes covered.
+- Karunia House Lodge, Kaia Raya Surf Lodge and Umi Resort are named. Supply the nights at each property and room-sharing basis.
+- The printed “Ivisa fee” wording is unclear. Clarify the visa service, fee, eligibility and country covered.
+- Supply exclusions and optional activity costs; clarify arrangements for the advertised Singapore day visit.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -554,7 +679,7 @@ Final payment deadline: Not supplied.
 - Confirm return transport, pickup points and times, age or height restrictions, and park operating arrangements.
 - The poster does not explicitly label the price as per person; confirm the pricing basis.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
 
 ---
 
@@ -611,7 +736,7 @@ Final payment deadline: 2026-12-15
 
 ### Client confirmation
 
-- Confirm the accommodation property, transport origin and return arrangement, attraction entry fees and the identity of “Potholes”.
-- The poster lists a final-payment deadline of 15 December 2026; reconfirm before payment.
+- Three nights, daily breakfast, transport and the listed attraction visits are included. Supply the accommodation property, room basis, transport origin and return arrangement.
+- Clarify whether admission fees for the listed visits are covered, and which site the printed “Potholes” refers to.
 - Reconfirm advertised prices, current availability, departure point and booking deadline with DDTC.
-- The poster describes the deposit as non-refundable. Refund and cancellation conditions require client and legal confirmation; no binding terms are published here.
+- Final refund, cancellation and rescheduling wording requires client approval before publication as booking conditions; no binding terms are published here.
